@@ -122,7 +122,7 @@ function drawWeatherGraph(data) {
     ctx.font = '14px Arial';
     labels.forEach((label, index) => {
         const xPos = leftPadding + index * xScale;
-        ctx.fillText(label, xPos - 15, canvasHeight - bottomPadding + 20); // Adjusted position for X-axis labels
+        ctx.fillText(label, xPos - 15, canvasHeight - bottomPadding + 20);
     });
 
     // Draw graph
@@ -156,7 +156,7 @@ function drawWeatherGraph(data) {
     for (let i = 0; i <= 5; i++) {
         const tempLabel = minTemp + (labelInterval * i);
         const yPos = canvasHeight - bottomPadding - (tempLabel - minTemp) * yScale;
-        ctx.fillText(tempLabel.toFixed(1) + '°C', leftPadding - 40, yPos + 5); // Adjusted position for Y-axis labels
+        ctx.fillText(tempLabel.toFixed(1) + '°C', leftPadding - 40, yPos + 5);
     }
 
     // Draw X-axis and Y-axis lines
