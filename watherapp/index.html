@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+</head>
+<body>
+    <div class="weather-app">
+        <h1>Weather App</h1>
+        <div class="search-area">
+            <input type="text" id="city-input" placeholder="Enter area/city name">
+            <button id="search-btn">Get Weather</button>
+        </div>
+        <div id="weather-info">
+            <h2 id="city">City: </h2>
+            <div class="infodetalis">
+                <p class="info" id="temperature">Temperature: N/A</p>
+                <p class="info" id="description">Description: N/A</p>
+                <p class="info" id="feels-like">Feels like: N/A</p>
+                <p class="info" id="wind-speed">Wind Speed: N/A</p>
+                <p class="info" id="sky-condition">Sky Condition: N/A</p>
+                <p class="info" id="humidity">Humidity: N/A</p>
+                <p class="info" id="coordinates">Coordinates: N/A</p>
+            </div>
+        </div>
+        <div class="forecast">
+            <div class="graph" style="padding: 20px;">
+                <h1 style="color: red;text-align: center;text-shadow: 0px 0px 5px yellow;">graph Analisis</h1>
+                <canvas id="weatherCanvas" width="600" height="400"></canvas>
+                <div id="tooltip"></div>
+            </div>
+           <div>
+            <h1 style="color: red;text-align: center;text-shadow: 0px 0px 5px yellow;">Map on Current possion</h1>
+            <div id="map"></div>
+           </div>
+            <div id="forecast-info">
+                <p>Morning: N/A</p>
+                <p>Afternoon: N/A</p>
+                <p>Evening: N/A</p>
+                <p>Overnight: N/A</p>
+            </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
